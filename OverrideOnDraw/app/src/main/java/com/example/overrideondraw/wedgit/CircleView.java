@@ -38,9 +38,19 @@ public class CircleView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        int width = getWidth();  // android:layout_width="match_parent"
-        int height = getHeight();// android:layout_height="200dp"
+//        int width = getWidth();  // android:layout_width="match_parent"
+//        int height = getHeight();// android:layout_height="200dp"
+//        int radius = Math.min(width, height)/2;
+//        canvas.drawCircle(width/2, height/2, radius, mPaint);
+
+        // 考虑xml文件中添加padding属性后的计算方式
+        int pdl = getPaddingLeft();
+        int pdr = getPaddingRight();
+        int pdt = getPaddingTop();
+        int pdb = getPaddingBottom();
+        int width = getWidth() - pdl - pdr;
+        int height = getHeight() - pdt -pdb;
         int radius = Math.min(width, height)/2;
-        canvas.drawCircle(width/2, height/2, radius, mPaint);
+        canvas.drawCircle(pdl + width/2, pdt + height/2, radius, mPaint);
     }
 }
