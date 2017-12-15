@@ -13,7 +13,7 @@
     第四步：将android:layout_width改成wrap_content测试看看-->
     <com.example.overrideondraw.wedgit.CircleView
         android:id="@+id/circle_view1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:layout_margin="20dp"
         android:padding="30dp"
