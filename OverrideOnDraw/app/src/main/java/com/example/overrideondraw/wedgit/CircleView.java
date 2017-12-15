@@ -1,12 +1,15 @@
 package com.example.overrideondraw.wedgit;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.example.overrideondraw.R;
 
 /**
  * Created by Administrator on 17-12-15.
@@ -28,6 +31,8 @@ public class CircleView extends View {
 
     public CircleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr, 0);
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.MyCircleView);
+        mColor = a.getColor(R.styleable.MyCircleView_my_circle_color, Color.RED);
         init();
     }
 

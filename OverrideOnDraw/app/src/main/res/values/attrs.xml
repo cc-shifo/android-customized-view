@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    // 自定义属性, declare-styleable name声明自定义属性集合，name是集合名称
+    <declare-styleable name="MyCircleView">
+        // attr name="my_circle_color"是集合中的属性之一，name是这个属性的名称，format是这个属性的类型
+        // 自定义属性第二步，要在使用自定义属性的xml文件中声明一个命名空间，通过“命名空间名:属性名称”的
+        // 方式来使用这个属性。
+        <attr name="my_circle_color" format="color" />
+    </declare-styleable>
+</resources>
