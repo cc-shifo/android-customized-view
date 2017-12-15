@@ -8,10 +8,14 @@
     android:orientation="vertical"
     android:background="#ffffff">
 
+    <!--第二步：添加margin属性，测试看看
+    第三步：添加padding属性，测试看看
+    第四步：将android:layout_width改成wrap_content测试看看-->
     <com.example.overrideondraw.wedgit.CircleView
         android:id="@+id/circle_view1"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_margin="20dp"
         android:background="#000000"
         />
 
